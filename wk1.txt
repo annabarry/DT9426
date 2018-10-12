@@ -1,0 +1,123 @@
+Geometry
+
+calculate the volume of a sphere with radius 20mm. Formula for sphere volume is 4/3.Π.r3
+
+Output the result with a nice message. allow the user to enter a radius for the above program and output the result.
+
+import math
+​
+r= 2
+Π=3.14159
+​
+v = ((4/3)Π(r**3))
+​
+​
+print("The volume of the sphere is " + (str(v)) + " cm3")
+​
+​
+The volume of the sphere is 33.51029333333333 cm3
+calculate the volume of a cylinder, allowing the user to input the height and radius, and then print the output with a nice message.
+
+import math
+​
+​
+r=input("length of radius")
+h=input("Height of cylinder")
+Π=3.14159
+v= (Π)(r**2)(h)
+​
+​
+​
+print(("The volume of the cylinder is ") + (str(v)) + (" cm3"))
+
+import math
+​
+r=int(input("length of radius: "))
+h=int(input("Height of cylinder: "))
+Π=3.14159
+​
+v=(Π)(r**2)(h)
+​
+print(("The volume of the cylinder is ") + (str(v)) + (" cm3"))
+length of radius: 9
+Height of cylinder: 6
+The volume of the cylinder is 1526.8127399999998 cm3
+calculate the volume of a cone, allowing the user to input the height and radius, and then print the output with a nice message.
+
+import math
+​
+r=int(input("Length of radius: "))
+h=int(input("Height of cylinder: "))
+Π=3.14159
+​
+v=(Π)(r**2)(h/3)
+​
+​
+​
+print(("The volume of the cone is ") + (str(v)) + (" cm3"))
+​
+Length of radius: 2
+Height of cylinder: 3
+The volume of the cone is 12.56636 cm3
+
+Conversion
+calculate the fuel efficiency achieved on a journey, allowing the user to input the distance travelled and the amount of fuel used.
+
+import math
+​
+#d=distance
+#f=fuel consumed
+#fe=(d/f)
+​
+d=int(input("Distance travelled: "))
+f=int(input("Fuel consumed: "))
+​
+fe=(d/f)
+#print(str(fe))
+print(("The fuel efficiency of the car is ")+ (str(fe))+ ("km per litre"))
+​
+​
+Distance travelled: 250
+Fuel consumed: 3
+The fuel efficiency of the car is 83.33333333333333km per litre
+Currency Exchange
+
+create a Fahrenheit to Celsius converter, with user input create a Celsius to Fahrenheit converter, with user input combine the calculators into one, and allow the user to choose which conversion to do (hint: you'll need to use an if statement).
+
+#c=celsius
+#f=farenheit
+​
+#calc=(f-32)5/9=c
+​
+f=int(input("Degrees farenheit: "))
+​
+c=(f-32)(5/9)
+​
+print(("The temperature converted to degrees celsius is: ")+ (str(c)) + (" C"))
+Degrees farenheit: 100
+The temperature converted to degrees celsius is: 37.77777777777778 C
+
+#c=celsius
+#f=farenheit
+​
+#calc=(f-32)5/9=c
+​
+c=int(input("Degrees celsius: "))
+​
+f=(32)+((5/9)(c))
+​
+print(("The temperature converted to degrees farenheit is: ")+ (str(f)) + (" F"))
+Degrees celsius: 0
+The temperature converted to degrees farenheit is: 32.0 F
+
+write three key features of Python that make it one of the most popular languages for programming?
+
+It is free and open source. 2) It is a simple language. 3)It is easy to learn.
+What problems has Python faced as a language and ecosystem?
+It is slow in comparison to other languages, its not a good language for mobile development/smartphone applications and has design restrictions.
+
+What major software/applications are built on Python (name 3 not mentioned already)?
+
+Youtube 2)Instagram 3)spotify
+What relationship does it have with GIS (not mentioned already)?
+Use of Python is increasing rapidly in GIS. It is used with ArcGIS and QGIS and has allowed users to create specific programs to access a wide array of tools and utilities.
