@@ -1,0 +1,219 @@
+Jupyter Notebook
+week2_excercises
+
+Take a year number as input from the user, and output whether the year is a leap-year or not.
+
+https://en.wikipedia.org/wiki/Leap_year#Algorithm
+
+Extend the program to output how long it has been since the last leap year if it is not a leap year.
+
+Take a year number as input from the user, and output whether the year is a leap-year or not.
+​
+https://en.wikipedia.org/wiki/Leap_year#Algorithm
+​
+Extend the program to output how long it has been since the last leap year if it is not a leap year.
+​
+
+x= int(input("Enter a year: "))
+​
+if (x % 4) != 0:
+    print("It is a normal year")
+    
+elif (x % 100) != 0: 
+    print("It is a leap year")
+    
+elif (x % 400) != 0 :
+    print("It is a common year")
+    
+else:
+    print("It is a leap year")
+​
+Enter a year: 1806
+It is a normal year
+Write a program that takes a month numeral from the user and returns the text month and the season that the month is in.
+
+Extend the above program to also return the number of days in the month entered.
+
+
+x= int(input("Enter an month in numeral format: "))
+​
+months= ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+​
+y = (x - 1)
+​
+​
+#if y <= 12:
+   # print(months[y])
+    
+if (x == 1):
+    print((months[y]) + (" is in Winter"))
+    
+elif (x >=2) and (x<=4):
+    print(months[y] + " is in Spring")
+    
+elif (x >=5) and (x<=7):
+    print(months[y]  + " is in Summer")
+    
+elif (x >=8) and (x<=10):
+    print(months[y] + " is in Autumn")
+    
+elif (x >=11) and (x<=12):
+    print(months[y] + " is in Winter")
+    
+    
+if (x == 9) or (x == 4) or (x==6) or (x==11):
+    print((months[y] + " has 30 days"))
+    
+elif(x == 1) or (x == 3) or (x == 5) or (x == 7) or (x == 8) or (x == 10) or (x == 12):
+    print((months[y] + " has 31 days"))
+    
+elif (x == 2):
+    print((months[y] + " has 28 or 29 days, depending on the year"))
+    
+else:
+    print("Error")
+​
+​
+Enter an month in numeral format: 2
+February is in Spring
+February has 28 or 29 days, depending on the year
+Write a program that makes a shopping list, with the user able to enter an item and the number of items required. Then print the list, and the total number of items needed.
+
+
+list=[]
+​
+add= input("Want to add something to you shopping list? Y or N? ")
+​
+while add.lower() =="y":
+    item = input("Enter your item to the list: ")
+    list.append(item)
+    add = input("Want to add something to you shopping list? Y or N? ")
+    
+    
+    
+print("Here is you shopping list")
+print(list)
+​
+y=str(len(list))
+print((y) + " items need to be bought")
+Want to add something to you shopping list? Y or N? y
+Enter your item to the list: cake
+Want to add something to you shopping list? Y or N? y
+Enter your item to the list: tea
+Want to add something to you shopping list? Y or N? y
+Enter your item to the list: water
+Want to add something to you shopping list? Y or N? n
+Here is you shopping list
+['cake', 'tea', 'water']
+3 items need to be bought
+Write a function which finds the largest of a list of numbers. Do not use a method, compare each element to the current maximum. Use a loop.
+
+
+numbers= ["1", "23", "56", "87", "103"]
+max=0
+​
+for t in numbers:
+    if t > max:
+        max=i
+        
+print(max)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-8-55c6f8baf29c> in <module>()
+      3 
+      4 for t in numbers:
+----> 5     if t > max:
+      6         max=i
+      7 
+
+TypeError: '>' not supported between instances of 'str' and 'int'
+
+
+1, 2, -8, 0
+def max_num_in_list(list):
+    max = list[0]
+    for a in list:
+        if a > max:
+            max = a
+        
+    return max
+print(max_num_in_list([1, 2, -8, 0]))
+2
+
+lst = []
+num = int(input('How many numbers: '))
+for n in range(num):
+    numbers = int(input('Enter number '))
+    lst.append(numbers)
+print("Maximum element in the list is :", max(lst), "\nMinimum element in the list is :", min(lst))
+
+​
+
+Create a program that gives the user a menu with the following options:
+-A Add an element to a list
+-R Remove an element from the list
+-P Replace an element with another
+-S sort the list 
+Create a program that gives the user a menu with the following options:
+-A Add an element to a list
+-R Remove an element from the list
+-P Replace an element with another
+-S sort the list 
+Original list: [‘Madrid’, ‘Dublin’, ’New York’, ’Paris’, ’London’]
+
+list=["madrid", "Dublin", "New York", "Paris", "London"]
+​
+add=input("Chose an option for the list: ")
+​
+while add.lower()== "a":
+    adda =input("Chose an element to add: ")
+    list.append(adda)
+    list= input("Choose another program from the menu: ")
+    
+print(c)    
+​
+Pick out three methods that are implemented by the list object, and describe what they do. Write some pseudocode (code that doesn't have to run but makes logical sense) that shows how each method might be used.
+
+
+= 
+list sort- sorts lists in a specific order- ascending or descending
+​
+sort() = [a, c, f, m]
+​
+list length - gives length of a list
+​
+len()= 5
+​
+list max - gives largest element of the list
+​
+max()= 
+​
+How would you implement a counter in a for loop? That is, as you iterate through the items in a sequence, how do you count how many times you run the loop? Show this with pseudocode.
+
+
+​
+How would you just output every third item?
+
+
+[::3]
+What module would you import for;
+
+working with directories and paths working with dates and times working with common data interchange formats (google might help...) hint https://docs.python.org/3.6/library/index.html
+
+
+p
+pathlib
+datetime
+pycdf
+​
+Write the import statement for each of the above cases.
+
+
+pathlib
+import pathlib
+import datetime 
+import pycdf
+Have a look at tuples. How are these different from lists. Why would you use one over the other?
+
+
+TUples are different to lists as are they are immutable, they cannot be changed. Tuples can be processed more quickly than lists.
