@@ -1,0 +1,164 @@
+STRINGS
+
+Write a Python program to count the number of times a character appears in a string.
+
+counter = 0
+a_list= ["a", "b", "c", "d"]
+​
+for i in a_list:
+    counter += 1
+    
+print(counter)
+4
+Write a Python program to get a string made of the first 2 and the last 2 chars from a given a string. If the string length is less than 2, return instead of the empty string.
+
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+​
+alphabet[:2] + alphabet [-2:]
+​
+​
+'abyz'
+Write a Python program to get a single string from two given strings, separated by a space and swap the first two characters of each string. Sample String : 'abc', 'xyz' Expected Result : 'xyc abz'
+
+a = 'abc'
+b = 'xyz'
+​
+print(a + " " + b)
+b[:2]+ a[-1:] + " " + a[:2]+ b[-1:]
+​
+abc xyz
+'xyc abz'
+Write a Python function that takes a list of words and returns the length of the longest one
+
+list= ['apple', 'pear', 'pie', 'banana', 'ant']
+​
+#for i in list:
+#    print(len(i))
+    
+longest_name = len(list[0])    
+​
+for i in list:
+    if len(i) >= longest_name:
+        longest_name = len(i)
+        output = i 
+        
+print(output)
+               
+        
+        
+banana
+DICTS
+
+Write a Python script to print a dictionary where the keys are numbers between 1 and 15 (both included) and the values are square of keys. Result should be like {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, .....}
+
+square_dict = {}
+​
+​
+for i in range(1, 16):
+    square_dict[i]= i**2
+​
+print(square_dict)
+​
+​
+​
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100, 11: 121, 12: 144, 13: 169, 14: 196, 15: 225}
+1240
+Write a Python program to sum all the items in the dictionary you made above.
+
+square_dict = {}
+​
+​
+for i in range(1, 16):
+    square_dict[i]= i**2
+​
+​
+sum(square_dict.values()) + sum(square_dict.keys())
+1360
+Write a Python program to get the maximum and minimum value in a dictionary.
+sample_dict = {'x':500, 'y':5874, 'z': 560}
+
+
+sample_dict = {'x':500, 'y':5874, 'z': 560}
+​
+print(max(sample_dict.values()))
+​
+print(min(sample_dict.values()))
+5874
+500
+
+​
+Create a program which takes input from the user - they should enter a name, followed by a phone number, an email address and a date of birth. Use a dictionary to store the information. Allow the user to keep adding names and information to the dictionary until they want to stop. Then ask them do they want to look up a person's information and display it in a nicely printed output.
+
+info_dict = {}
+​
+f=input("Would you like to add a name to the list? Y/N ")
+​
+for g in f:
+    while (f == "y"):
+        a=input("Please enter a name: ")
+        b=input("Please enter a a phone number: ")
+        c=input("Please enter an email address: ")
+        d=input("Please enter a date of birth: ")
+        info_dict[(a)] = (b), (c), (d)
+        f=input("Would you like to add another name to the list? Y/N ")
+    else:
+        break 
+print(info_dict)
+​
+t=input("Would you like to look up a name in the dictionary? Y/N ")
+​
+for m in t:
+    if t == "y":
+        k= input("Enter a name: ")
+        if k in info_dict.keys():
+            print(k)
+    elif t == "n":
+        print( " ")
+        
+        
+    
+#for g in e:
+ #   if e ==
+        
+#info_dict[(a)] = (c), (d)
+​
+print(info_dict)
+Would you like to add a name to the list? Y/N y
+Please enter a name: Anna 
+Please enter a a phone number: aethedth
+Please enter an email address: ajsr
+Please enter a date of birth: adghaet
+Would you like to add another name to the list? Y/N y
+Please enter a name: Barry
+Please enter a a phone number: aadgn
+Please enter an email address: adgmadg
+Please enter a date of birth: agdmafgdm
+Would you like to add another name to the list? Y/N n
+{'Anna ': ('aethedth', 'ajsr', 'adghaet'), 'Barry': ('aadgn', 'adgmadg', 'agdmafgdm')}
+Would you like to look up a name in the dictionary? Y/N y
+Enter a name: Anna
+Here is you dictionary 
+{'Anna ': ('aethedth', 'ajsr', 'adghaet'), 'Barry': ('aadgn', 'adgmadg', 'agdmafgdm')}
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-1-02cb075b5539> in <module>()
+     32 #info_dict[(a)] = (c), (d)
+     33 
+---> 34 print("Here is you dictionary ") + print(info_dict)
+
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+
+
+contacts = {'Anna': ('aethedth', 'ajsr', 'adghaet'), 
+            'Barry': ('aadgn', 'adgmadg', 'agdmafgdm')}
+​
+t=input("Enter name to search: ")
+​
+for m in t:
+    t=input("Enter name to search: ")
+    if t in contacts.keys():
+        print([(t)])
+    else:
+        break
+            
+Enter name to search: Anna
