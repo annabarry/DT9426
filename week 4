@@ -1,0 +1,97 @@
+#Fizzbuzz
+# Write a Python program which iterates the integers from 1 to 50. For 
+# multiples of three print "Fizz" instead of the number and for the multiples 
+# of five print "Buzz". For numbers which are multiples of both three and five 
+# print "FizzBuzz".
+
+for i in range(1, 51):
+    if (i % 3 == 0) and (i % 5 == 0):
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)
+        
+#continue puzzle
+# Write a Python program that prints all the numbers from 0 to 6 except 3 and 6.
+# Note : Use 'continue' statement. 
+
+for x in range(6):
+    if (x == 3 or x==6):
+        continue
+
+    print(x,end=' ')
+
+print("\n")
+
+
+#Letterdict puzzle
+# Write a Python program to create a dictionary from a string - it should add 
+# a new key for every letter in the string and the value should hold the count
+# of that letter.
+
+# Hint - just replace the & symbols with the correct code to make this work - 
+# each & symbol is one letter, digit or symbol
+
+input_str = "London is the capital of the United Kingdom"
+
+letter_dict = {}
+
+for l in input_str:
+    if l.lower() in letter_dict.keys():
+        letter_dict[l.lower()] += 1
+    else:
+        letter_dict[l.lower()] = 1
+
+print(letter_dict)
+
+
+#Prime test puzzle
+# Write a Python script that takes a number as a parameter and check the 
+# number is prime or not.
+
+# A prime is a number which is only divisible by itself and 1
+
+
+
+
+def test_prime(n):
+    if (n==1):    
+        return False    
+    elif (n==2):
+        return True;
+        for x in range(2,n):
+            if(n % x==0):
+                return False                  
+    else:
+        return True        
+        
+print(test_prime(2))
+
+
+
+#Write a Python function that accepts a string 
+#and calculate the number of upper case letters and lower case letters. 
+ 
+d={"UPPER_CASE":0, "LOWER_CASE":0}
+
+string_test('The quick Brow Fox')
+def string_test(s):
+    for c in s:
+        if c.isupper():
+            d["UPPER_CASE"]+=1
+        elif c.islower():
+            d["LOWER_CASE"]+=1
+        else:
+            pass
+        
+print ("Original String : ", s)               
+print ("No. of Upper case characters : ", d["UPPER_CASE"])
+print ("No. of Lower case Characters : ", d["LOWER_CASE"])      
+
+
+#I had this one right, but I moved a line and I couldn't figure it out!
+
+
